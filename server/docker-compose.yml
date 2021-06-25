@@ -1,0 +1,26 @@
+version: "3.9"
+   
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    build: .
+    image: personal-server
+    # ./manage.py loaddata initial_data &&
+    command: > 
+      bash -c "python wait_for_postgres.py &&
+                      ./manage.py makemigrations && 
+                      ./manage.py migrate &&
+                      ./manage.py runserver 0.0.0.0:8000 "
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
