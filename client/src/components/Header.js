@@ -17,6 +17,10 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
+import {   
+  Link 
+} from 'react-router-dom'
+
 const solutions = [
   {
     name: 'Analytics',
@@ -81,7 +85,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Header() {
   return (
     <Popover className="relative bg-white">
       {({ open }) => (
@@ -244,11 +248,18 @@ export default function Example() {
                   )}
                 </Popover> */}
 
-                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Pricing
+                <a href="https://xige.page/XigeChenUT" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                    Port
+                </a>
+
+                <a href="#Projects" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                    Projects
                 </a>
                 <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Docs
+                  Blog
+                </a>
+                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  Resume
                 </a>
 
                 {/* <Popover className="relative">
@@ -362,11 +373,11 @@ export default function Example() {
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img
+                      {/* <img
                         className="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                         alt="Workflow"
-                      />
+                      /> */}
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -377,7 +388,8 @@ export default function Example() {
                   </div>
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
-                      {solutions.map((item) => (
+                      LOL
+                      {/* {solutions.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
@@ -386,11 +398,11 @@ export default function Example() {
                           <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                           <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                         </a>
-                      ))}
+                      ))} */}
                     </nav>
                   </div>
                 </div>
-                {/* <div className="py-6 px-5 space-y-6">
+                <div className="py-6 px-5 space-y-6">
 
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                     <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
@@ -426,7 +438,7 @@ export default function Example() {
                     </p>
                   </div>
                   
-                </div> */}
+                </div>
               </div>
             </Popover.Panel>
           </Transition>
