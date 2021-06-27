@@ -1,28 +1,24 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import { useLocation } from 'react-router-dom';
+
+
 import {
+  PresentationChartLineIcon,
   BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
+  ChipIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 
-const headerElements = [
+let headerElements = [
   {
     name: 'Portfolio',
     description: 'My personal portfolio of my time at UT.',
-    href: 'https://xige.page/XigeChenUT',
+    href: '#',
     icon: BookmarkAltIcon,
   },
   {
@@ -31,16 +27,16 @@ const headerElements = [
     href: '#Projects',
     icon: BookmarkAltIcon,
   },
-  {
-    name: 'Resume',
-    description: 'Interactive Resume',
-    href: '#',
-    icon: BookmarkAltIcon,
-  },
+  // {
+  //   name: 'Resume',
+  //   description: 'Interactive Resume',
+  //   href: '#Resume',
+  //   icon: BookmarkAltIcon,
+  // },
   {
     name: 'Food',
     description: 'Interactive Resume',
-    href: '#',
+    href: '#Food',
     icon: BookmarkAltIcon,
   },
 ]
@@ -51,7 +47,7 @@ const undergradTa = [
     name : 'Intro to Computing',
     prof : 'Yale Patt',
     href : '#',
-    icon : ShieldCheckIcon,
+    icon : ChipIcon,
     add_info : [],
   }
 ]
@@ -60,9 +56,9 @@ const resourceTools = [
   {
     id : 'mdslides',
     name : 'Markdown Slides',
-    href : '#',
+    href : 'https://www.xige.page/markdown-render/',
     prof : '',
-    icon : ShieldCheckIcon,
+    icon : PresentationChartLineIcon,
     add_info : [],
   }
 ]
@@ -73,6 +69,10 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+
+  const { pathname } = useLocation()
+
+
   return (
     <Popover className="relative bg-white">
       {({ open }) => (
@@ -149,7 +149,9 @@ export default function Header() {
                 </Popover>
                 {headerElements.map((el) => (
                   <a href={el.href} className="text-base font-medium text-gray-500 hover:text-gray-900">
-                    {el.name}
+                    <p class={pathname.substring(1) === el.href.substring(1) ? "underline" : ""}>
+                      {el.name}
+                    </p>
                   </a>
                 ))}
               </Popover.Group>
@@ -201,7 +203,9 @@ export default function Header() {
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                     {headerElements.map((item) => (
                       <a key={item.name} href={item.href} className="text-base font-medium text-gray-900 hover:text-gray-700">
-                        {item.name}
+                        <p class={pathname.substring(1) === item.href.substring(1) ? "underline" : ""}>
+                          {item.name}
+                        </p>
                       </a>
                     ))}
                   </div>
