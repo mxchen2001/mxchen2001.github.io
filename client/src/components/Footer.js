@@ -18,13 +18,13 @@ export default function Footer() {
                         <p class="opacity-60">Just an average college student</p>
                     </div>
                     <div class="w-full sm:w-1/5 flex flex-col space-y-3">
-                        <a href="#" class="flex flex-row opacity-60">
+                        <a target="_blank" href="https://www.linkedin.com/in/xige-michael-chen-7a4a45190/" class="flex flex-row opacity-60">
                             <LinkedInIcon/>
                             <a className="pl-4">
                                 Linkedin
                             </a>
                         </a>
-                        <a href="#" class="flex flex-row opacity-60">
+                        <a target="_blank" href="https://github.com/mxchen2001" class="flex flex-row opacity-60">
                             <GitHubIcon />
                             <a className="pl-4">
                                 Github
@@ -32,13 +32,13 @@ export default function Footer() {
                         </a>
                     </div>
                     <div class="w-full sm:w-1/5 flex flex-col space-y-3">
-                        <a href="#" class="flex flex-row opacity-60">
+                        <a target="_blank" href="mailto:mxchen2001@utexas.edu" class="flex flex-row opacity-60">
                             <EmailIcon/>
                             <a className="pl-4">
                                 Email
                             </a>
                         </a>
-                        <a href="#" class="flex flex-row opacity-60">
+                        <a href="https://github.com/mxchen2001/mxchen2001.github.io/raw/master/UT_files/Other/xige_chen_resume.pdf" class="flex flex-row opacity-60">
                             <DownloadIcon className="h-6 w-6"/>
                             <a className="pl-4">
                                 Resume
