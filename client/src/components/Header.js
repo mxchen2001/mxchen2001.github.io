@@ -10,6 +10,7 @@ import {
   MenuIcon,
   ChipIcon,
   XIcon,
+  TableIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
@@ -59,6 +60,14 @@ const resourceTools = [
     href : 'https://www.xige.page/markdown-render/',
     prof : '',
     icon : PresentationChartLineIcon,
+    add_info : [],
+  },
+  {
+    id : 'ascii-diagrams',
+    name : 'Ascii Diagrams',
+    href : 'https://www.xige.page/ascii-diagrams/',
+    prof : '',
+    icon : TableIcon,
     add_info : [],
   }
 ]

@@ -14,6 +14,7 @@ import hacktx2020 from '../../assets/hacktx2020.png'
 import thisSite from '../../assets/thisSite.png'
 import mdSlides from '../../assets/mdslides.png'
 import mos from '../../assets/mos.png'
+import ascii_diagram from '../../assets/ascii_diagram.png'
 
 function createProject(title, description, image, link, tags) {
     return {title, description, image, link, tags}
@@ -28,6 +29,20 @@ const projectCards = [
                         ['React', 'Material UI']
                     ),
                     createProject(
+                        "MOS", 
+                        "A Hobby Operating System built for x86 that was inspired after completing the PINTOS labs done in my Operating Systems.", 
+                        mos, 
+                        "https://github.com/mxchen2001/mos",
+                        ['NASM', 'C', 'Makefile', 'In-Progress']
+                        ),
+                    createProject(
+                        "Ascii Diagrams", 
+                        "A web based app that generates ascii diagram based on a simple markup style input.", 
+                        ascii_diagram, 
+                        "https://www.xige.page/ascii-diagrams/",
+                        ['React', 'Material UI', 'In-Progress']
+                    ),
+                    createProject(
                         "This Website", 
                         "This website is built using React an Material UI and the Parallax is built using React. This gives a quick overview of my UT life. ", 
                         thisSite, 
@@ -35,18 +50,11 @@ const projectCards = [
                         ['TailwindCSS', 'React', 'Material UI']
                     ),
                     createProject(
-                        "MOS", 
-                        "A Hobby Operating System built for x86 that was inspired after completing the PINTOS labs done in my Operating Systems.", 
-                        mos, 
-                        "https://github.com/mxchen2001/mos",
-                        ['NASM', 'C', 'Makefile']
-                    ),
-                    createProject(
                         "Hack TX", 
                         "A NLP app built using React that that uses Google's NLP engine that gives feedback to help students with job inteviews.", 
                         hacktx2020, 
                         "https://github.com/ishan0102/hacktx-20",
-                        ['React', 'Material UI']
+                        ['React', 'Material UI', 'Python']
                     ),
                     createProject(
                         "Vemno Automation", 
