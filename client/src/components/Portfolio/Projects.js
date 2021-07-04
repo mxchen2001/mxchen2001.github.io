@@ -69,11 +69,11 @@ const projectCards = [
 function ProjectCards(props) {
     return (
         <a href={props.link}>
-            <div class="cursor-pointer hover:bg-gray-100 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="max-w-sm pt-4 rounded-3xl overflow-hidden">
                 <img class="h-10" class="lazy" src={props.image} alt={props.title}/>
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">{props.title}</div>
-                    <p class="text-gray-700 text-base">
+                    <p class="text-gray-700 items-baseline text-base">
                         {props.text}
                     </p>
                 </div>
@@ -95,9 +95,9 @@ class Projects extends Component {
     
     render() { 
         return (
-            <div class="pt-10 pb-10 pr-4 pl-4 grid items-center xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+            <div class="pt-10 pb-10 pr-4 pl-4 grid items-stretch xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                 {projectCards.map((el) => (
-                    <div class="flex flex-col justify-center items-center">
+                    <div class="flex justify-center items-start cursor-pointer hover:bg-gray-200 shadow-xl rounded-xl">
                         <ProjectCards title={el.title} text={el.description} image={el.image} tags={el.tags} link={el.link} />
                     </div>
                 ))}

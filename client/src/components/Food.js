@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ramen from '../assets/ramen.png'
 import pizza from '../assets/pizzaPic.png'
+import sushi from '../assets/sushi.png'
+import chickenSandwich from '../assets/chicken_sandwich.png'
 
 function createFood(title, text, ingredients, image) {
     return {title, text, ingredients, image}
@@ -18,6 +20,18 @@ const foodCards = [
         'Pan style Pizza with Mozzarella and Parmigiano-Reggiano.',
         [],
         pizza
+    ),
+    createFood( 
+        'Sushi',
+        'Sushi made with egg, imitation crab, carrots, cucumbers, and rice seasoned with furikake and togarashi.',
+        [],
+        sushi
+    ),
+    createFood( 
+        'Chicken Sandwich',
+        'Spicy crispy chicken sandwich with breading seasoned with paprika and tabasco sauce made from japanese mayo and sriracha.',
+        [],
+        chickenSandwich
     ),
 ]
 

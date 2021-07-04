@@ -200,7 +200,7 @@ export default function Header() {
                       ))}
                       <a className="font-medium text-gray-500">Tools</a>
                       {resourceTools.map((item) => (
-                        <a key={item.id} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-200">
+                        <a key={item.id} href={item.href} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-200">
                           <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                           <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                         </a>
