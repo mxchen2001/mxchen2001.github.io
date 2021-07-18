@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Container, Grid } from '@material-ui/core';
 
+import mergepad from '../../assets/mergepad.png'
 import venmo_electron from '../../assets/venmo_electron.png'
 import hacktx2020 from '../../assets/hacktx2020.png'
 import thisSite from '../../assets/thisSite.png'
@@ -21,6 +22,13 @@ function createProject(title, description, image, link, tags) {
 }
 
 const projectCards = [
+                    createProject(
+                        "MergePad", 
+                        "A web based collaborative code editor that uses Automerge (CRDT) to resolve simultaneous conflicts.", 
+                        mergepad, 
+                        "https://www.xige.page/crdt-editor/",
+                        ['React', 'Socket.io', 'Automerge', 'CRDT', 'P2P']
+                    ),
                     createProject(
                         "Markdown Slides", 
                         "A web based slide editor/renderer that uses markdown for quick and easy editing", 

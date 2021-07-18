@@ -10,7 +10,8 @@ import {
   MenuIcon,
   ChipIcon,
   XIcon,
-  TableIcon
+  TableIcon,
+  ClipboardIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
@@ -68,6 +69,14 @@ const resourceTools = [
     href : 'https://www.xige.page/ascii-diagrams/',
     prof : '',
     icon : TableIcon,
+    add_info : [],
+  },
+  {
+    id : 'mergepad',
+    name : 'MergePad',
+    href : 'https://www.xige.page//crdt-editor/',
+    prof : '',
+    icon : ClipboardIcon,
     add_info : [],
   }
 ]
